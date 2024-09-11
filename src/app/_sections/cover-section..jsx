@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import React from "react";
 import profile from "./../../images/profile.jpg";
@@ -49,33 +51,45 @@ export default function CoverSection() {
       </div>
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-40 lg:flex lg:px-8 lg:pt-40">
         <div className="mx-auto max-w-2xl flex-shrink-0 lg:mx-0 lg:max-w-xl lg:pt-8">
-          <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <motion.h1
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+            className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl"
+          >
             Marlou Flores Pepito
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          </motion.h1>
+          <motion.div
+            initial={{ x: -200 }}
+            animate={{ x: 0 }}
+            className="mt-6 text-lg leading-8 text-gray-300"
+          >
             The capacity to learn is a gift; the ability to learn is a skill;
             <br /> the willingness to learn is a choice.
             <br />
-          </p>
-          <div className="mt-10 flex items-center gap-x-6">
-            <a
-              href="#"
-              className=" font-semibold leading-6 text-white text-4xl"
-            >
-              Fullstack Developer
-            </a>
-          </div>
+          </motion.div>
+          <motion.div initial={{ x: -200 }} animate={{ x: 0 }}>
+            <div className="mt-10 flex items-center gap-x-6">
+              <a
+                href="#"
+                className=" font-semibold leading-6 text-white text-4xl"
+              >
+                Fullstack Developer
+              </a>
+            </div>
+          </motion.div>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
-            <Image
-              alt="App screenshot"
-              src={profile}
-              quality={100}
-              width={2432}
-              height={1442}
-              className="w-[20rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
-            />
+            <motion.div initial={{ x: 400 }} animate={{ x: 0 }}>
+              <Image
+                alt="App screenshot"
+                src={profile}
+                quality={100}
+                width={2432}
+                height={1442}
+                className="w-[20rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+              />
+            </motion.div>
           </div>
         </div>
       </div>

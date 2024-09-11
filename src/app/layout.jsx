@@ -1,3 +1,4 @@
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -24,9 +25,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div class=" inset-0 -z-10 min-h-screen w-full items-center bg-[radial-gradient(circle_0px_at_50%_300px,#fbfbfb36,#000)]">
-          <div className="pb-20">
-          {children}
-          </div>
+        {children}
         </div>
       </body>
     </html>
